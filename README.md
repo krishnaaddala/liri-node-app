@@ -37,7 +37,8 @@ Chrome browser
 
 ## Gif walkthrough
 
-![](https://github.com/krishnaaddala/train-schedulerHW/blob/master/assets/images/trainScheduler.gif)
+![Giphy 1](https://github.com/krishnaaddala/liri-node-app/blob/master/Images/Gify1-LIRI.gif)
+![Giphy 2](https://github.com/krishnaaddala/liri-node-app/blob/master/Images/Gify2-LIRI.gif)
 
 
 ## Code Snippets
