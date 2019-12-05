@@ -54,8 +54,7 @@ var searchInput = process.argv[3];
 //concert-this
 if (commandInput === "concert-this") {
     console.log("***********************searching for a concert***********************")
-    bandsInTown(searchInput)
-    logBands();
+    bandsInTown(searchInput);
 }
 //spotify-this
 else if (commandInput === "spotify-this-song") {
