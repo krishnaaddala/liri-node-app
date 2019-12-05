@@ -39,6 +39,12 @@ else if (commandInput === "spotify-this-song"){
 // You will utilize the node-spotify-api package in order to retrieve song information from the Spotify API.
 // The Spotify API requires you sign up as a developer to generate the necessary credentials. You can follow these steps in order to generate a client id and client secret:
     console.log("searching for a song on spotify")
+    // var searchWordsSpaced  = function () {
+    //     for (var i = 3; i < process.argv.length; i++) {
+    //         searchInput += process.argv[i] + " ";
+    //     }
+    //     // console.log(searchSpaced);
+    // };
     spotify.search({ type: 'track', query: searchInput }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
@@ -51,9 +57,24 @@ else if (commandInput === "movie-this"){
     console.log("searching for a movie on OMDB")
 }
 // do-what-it-says
+// node liri.js do-what-it-says
+
+// Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+
+// It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
+
+// Edit the text in random.txt to test out the feature for movie-this and concert-this.
 
 else if (commandInput === "do-what-it-says"){
-    console.log("searching for a random text inserted")
+   // console.log("searching for a random text inserted")
+fs.readFile("random.txt", "utf8", function(err,data){
+//console.log(data);
+var dataArr = data.split(",")
+console.log(dataArr);
+//put a ifElse into a function 
+//function do this takes 2 args (command & search term)
+// call the function again to pass arr[0] & arr [1]
+});
 }
 
 else{
@@ -88,16 +109,3 @@ else{
 
 // You'll use the axios package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use trilogy.
 
-
-
-
-// node liri.js do-what-it-says
-
-
-// Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-
-
-// It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
-
-
-// Edit the text in random.txt to test out the feature for movie-this and concert-this.
