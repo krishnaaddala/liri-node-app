@@ -3,25 +3,38 @@ var Spotify = require("node-spotify-api");
 var axios = require("axios");
 var moment = require("moment");
 var fs = require("fs");
-
-
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 
+var commandInput = process.argv[2];
+var searchInput = process.argv[3];
 
 // Make it so liri.js can take in one of the following commands:
-console.log(process.argv[2] + process.argv[3]) 
+console.log(commandInput + searchInput) 
+
 
 // concert-this
-
-
+if (commandInput === "concert-this"){
+    console.log("searching for a concert")
+}
 // spotify-this-song
 
-
-// movie-this
-
-
+else if (commandInput === "spotify-this-song"){
+    console.log("searching for a song on spotofy")
+}
+//movie-this
+else if (commandInput === "movie-this"){
+    console.log("searching for a movie on OMDB")
+}
 // do-what-it-says
+
+else if (commandInput === "do-what-it-says"){
+    console.log("searching for a random text inserted")
+}
+
+else{
+    console.log("LIRI does not know what to do")
+}
 
 
 
