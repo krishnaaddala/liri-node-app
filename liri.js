@@ -30,8 +30,7 @@ else if (commandInput === "do-what-it-says"){
    console.log("******************************searching for a random.txt file**********************")
    readFromFS();
 }
-
-
+//bands in town function
 function bandsInTown(band){
 var bandsUrl = "https://rest.bandsintown.com/artists/" + searchInput + "/events?app_id=codingbootcamp";
     axios.get(bandsUrl).then(function(response){
@@ -81,11 +80,11 @@ function moviesDB(movie){
     console.log("Actors: " + response.data.Actors);
   });
 }
-
+//read from random.txt function
 function readFromFS(){
 fs.readFile("random.txt", "utf8", function(err,data){
 //console.log(data);
 var dataArr = data.split(",")
-console.log(dataArr[1]);
+spotifySongs(dataArr[1]);
 });
 }
